@@ -59,3 +59,6 @@ These steps are completely optional, but they considerably improve the usability
 - [ ] Helligkeitskontrolltasten wieder herstellen 
 - [ ] gesture: 2-finger back and forth in browser
 - [ ] Is the PCI-E register hack really neccessary?
+
+
+https://everymac.com/systems/apple/macbook/specs/macbook-core-2-duo-2.4-white-13-polycarbonate-unibody-mid-2010-specs.html
