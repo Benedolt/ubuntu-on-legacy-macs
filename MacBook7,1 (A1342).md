@@ -6,8 +6,19 @@ The Mid-2010 white polycarbonate MacBook is an iconic device. Sure, with its Cor
 This is very straight-forward. Simply create a USB installer and boot from it. (Hold down the alt/option key after the chime to access the boot menu.) 
 **Tested with the original release, not the point release!**
 
-## PCIE-Register hin und herschieben. xD
-  https://askubuntu.com/questions/264247/proprietary-nvidia-drivers-with-efi-on-mac-to-prevent-overheating
+## Install nvidia drivers
+You should now be able to boot to the desktop. Ubuntu will run with the open source nouveau driver however, which means the Macbook runs pretty hot and will randomly lock up. These lock-ups only affect the graphical stack and not the underlying OS so it's a good idea to quickly set up a ssh server (`sudo apt install openssh-server`) and execute the following steps remotely. 
+
+The MacBook7,1 uses an Nvidia GeForce 320M which is only supported in the legacy nvidia-driver version 340. This version isn't available in Ubuntu anymore so we have to jump through a few hoops:
+
+### Make sure you're running a compatible kernel
+As of now the legacy driver `nvidia-340` doesn't work with the newest hardware-enablement (HWE) kernel in Ubuntu 22.04. So use `uname -r` to check with version you're on. If you're running the original 5.15 kernel you're good and can move on to the next step. If you're running anything newer than 5.15 you need to downgrade kernel using `sudo apt install --install-recommends linux-generic`. This will switch you from the HWE to the original kernel. Note, that this kernel is still supported until the end of life of Ubuntu 20.04 - so you're still secure.
+
+### Install the `nvidia-340` driver
+
+https://askubuntu.com/a/613573/21008
+
+
   
 ## Nvidia-Treiber
   Standardmäßig läuft Ubuntu mit nouveau und Wayland. Das hängt sich ab und zu auf. 
