@@ -33,23 +33,31 @@ If `apt` finishes without errors you're ready to reboot. You'll notice that the 
 These steps are completely optional, but they considerably improve the usability of our venerable MacBook.
 
 ### Gesten nachinstallieren
-  Mithilfe einer Gnome Shell Extension (X11 Gestures) können wir die Gesten wieder aktivieren.
-  
-  Extension Manager von hier installieren:
-  https://flathub.org/apps/details/com.mattjakeman.ExtensionManager
-  (Vorher apt install flatpak)  
-  
-  Touchégg installieren
-  sudo apt install touchegg
-  
-  Extension "X11 Gestures" über den Extension Manager installieren
-  Fertig.
-  
-### "fn" und linke "ctrl" Taste tauschen
-  Erstelle: /etc/modprobe.d/hid_apple.conf
-  Inhalt: options hid_apple swap_fn_leftctrl=1
-  Ausführen: sudo update-initramfs -u
-  Neustarten, Tasten physisch tauschen - fertig
+Unsurprisingly the legacy nvidia driver only supports legacy display servers, so you're now running traditional X11 instead of Wayland. That means that Gnome's nifty touchpad gestures (e.g. three finger swipe-up) don't work, because they are Wayland-only. I find it jarring to not have my touchpad gestures on a Mac and luckily you can re-enable them using José Expósito's `touchegg` and the `X11 Gestures` Gnome extension. 
+
+Install touchegg from José Expósito's PPA:
+```
+$ sudo add-apt-repository ppa:touchegg/stable
+$ sudo apt update
+$ sudo apt install touchegg
+```
+
+Then install the `X11 Gestures` extension from [here](https://extensions.gnome.org/extension/4033/x11-gestures/) and you're good to go.
+
+**Additional tip**: I find installing Gnome extensions from the browser cumbersome. An IMO better way is to use the Gnome Extension Manager, which you can get from the repo:
+```
+$ sudo apt install gnome-shell-extension-manager
+```
+Now you can lauch the extension manager from the dash and then search for and install the extension from there.
+
+### Switch "fn" und left "ctrl" key
+With all my other keyboards I'm used to the `ctrl` key being the leftmost key in the bottom row on the keyboard, on MacBooks that's where the `fn` key is however. Either you retrain your muscle memory or you just switch the keys back the way they're meant to be. :) In order to do that:
+```
+$ sudo nano /etc/modprobe.d/hid_apple.conf
+```
+And then put `options hid_apple swap_fn_leftctrl=1` in the document, save it and run `sudo update-initramfs -u`.
+
+After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ctrl` key. I also always physically switch the keys. Just gently pry up the keys, lifting the top left corner, switch `ctrl` and `fn`, click them into place and voilà.
 
 ### Autohotkey um Delete-Taste zu simulieren
 
@@ -60,5 +68,5 @@ These steps are completely optional, but they considerably improve the usability
 - [ ] gesture: 2-finger back and forth in browser
 - [ ] Is the PCI-E register hack really neccessary?
 
-
-https://everymac.com/systems/apple/macbook/specs/macbook-core-2-duo-2.4-white-13-polycarbonate-unibody-mid-2010-specs.html
+## Ressources
+- [MacBook Specs on Everymac](https://everymac.com/systems/apple/macbook/specs/macbook-core-2-duo-2.4-white-13-polycarbonate-unibody-mid-2010-specs.html)
