@@ -61,6 +61,8 @@ Then put `options hid_apple swap_fn_leftctrl=1` in the file, save it and run `su
 
 After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ctrl` key. I also always physically switch the keys. To do that just gently pry up the keys, lifting the top left corner, switch `ctrl` and `fn`, click them into place and voilà.
 
+**Note:** I also like to add `options hid_apple fnmode=2` to that file in order to default to F# keys instead of to media keys.
+
 ### Get the delete key back
 And the last keyboard related hack that I always execute is converting the `eject` key in the top right of the keyboard to be the `delete` key. Again this is totally optional - I just never need an eject key, but often need to delete stuff. :)
 
