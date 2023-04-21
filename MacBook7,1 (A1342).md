@@ -1,5 +1,7 @@
 # Ubuntu 22.04 on the MacBook 7,1 (Mid-2010 Polycarbonate)
 
+**Attention: As of April 2023 this guide is outdated. The point release 22.04.2 seems to have fixed the nouveau driver problems, so use that release.**
+
 The Mid-2010 white polycarbonate MacBook is an iconic device. Sure, with its Core 2 Duo P8600 it's not going to break any speed records, but if you adjust expectations accordingly it's still a very competent machine for webbrowsing and some media comsumption. Installing an SSD and doing a RAM upgrade (it can go up to 16GB - double that of the Pro models from the era!) helps of course. This document outlines how to get a modern Ubuntu OS up and running.
   
 ## Basic Installation 
