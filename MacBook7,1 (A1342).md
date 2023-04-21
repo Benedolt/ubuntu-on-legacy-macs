@@ -20,14 +20,16 @@ Find out how to do this over at [AskUbuntu](https://askubuntu.com/a/613573/21008
 ### 3. Install the `nvidia-340` driver
 Finally it's time to actually install the nvidia driver. As the driver is not available in the official repositories anymore we can't just use the Ubuntu driver installer but need to add a PPA instead:
 ```
-sudo add-apt-repository ppa:kelebek333/nvidia-legacy
+$ sudo add-apt-repository ppa:kelebek333/nvidia-legacy
 ```
 
 Installing the package `xorg-modulepath-fix` from that PPA executes a fix we need and then pulls in the correct `nvidia-340` package: 
 ```
-sudo apt install xorg-modulepath-fix
+$ sudo apt install xorg-modulepath-fix
 ```
+### 4. Enjoy
 If `apt` finishes without errors you're ready to reboot. You'll notice that the boot animation is somewhat garbled, but apart from that you're now running the correct nvidia driver and a stable X.org session.
+**Note:** Brightness controls is the only feature that doesn't work out of the box. Brightness is always at the max value.
   
 ## Quality of Life Changes
 These steps are completely optional, but they considerably improve the usability of our venerable MacBook.
@@ -55,17 +57,22 @@ With all my other keyboards I'm used to the `ctrl` key being the leftmost key in
 ```
 $ sudo nano /etc/modprobe.d/hid_apple.conf
 ```
-And then put `options hid_apple swap_fn_leftctrl=1` in the document, save it and run `sudo update-initramfs -u`.
+Then put `options hid_apple swap_fn_leftctrl=1` in the file, save it and run `sudo update-initramfs -u`.
 
-After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ctrl` key. I also always physically switch the keys. Just gently pry up the keys, lifting the top left corner, switch `ctrl` and `fn`, click them into place and voilà.
+After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ctrl` key. I also always physically switch the keys. To do that just gently pry up the keys, lifting the top left corner, switch `ctrl` and `fn`, click them into place and voilà.
 
-### Autohotkey um Delete-Taste zu simulieren
+### Get the delete key back
+And the last keyboard related hack that I always execute is converting the `eject` key in the top right of the keyboard to be the `delete` key. Again this is totally optional - I just never need an eject key, but often need to delete stuff. :)
+
+To do that, install `AutoKey` from the repos: `$ sudo apt install autokey-gtk`
+Run AutoKey, create a new `Phrase`, put `<delete>` in the big white text entry box and set the hotkey to `<code169>`. In the preferences window make sure that AutoKey is set to startup on login and that's that. :)
+
+### Two finger gestures for Firefox
+Under MacOS even Firefox supports two-finger swipes to jump back and forth. Under Ubuntu only Chromium-based browsers support that. I always install the Firefox extension [Two Finger History Jump](https://addons.mozilla.org/de/firefox/addon/two-finger-history-jump/) to get that feature back.
 
 ## TODO
 
 - [ ] PPA sichern 
-- [ ] Helligkeitskontrolltasten wieder herstellen 
-- [ ] gesture: 2-finger back and forth in browser
 - [ ] Is the PCI-E register hack really neccessary?
 
 ## Ressources
