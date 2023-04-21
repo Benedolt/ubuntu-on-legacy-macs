@@ -11,7 +11,7 @@ You should now be able to boot to the desktop. Ubuntu will run with the open sou
 The MacBook7,1 uses an Nvidia GeForce 320M which is only supported in the legacy nvidia-driver version 340. This version isn't available in Ubuntu anymore so we have to jump through a few hoops:
 
 ### 1. Make sure you're running a compatible kernel
-As of now the legacy driver `nvidia-340` doesn't work with the newest hardware-enablement (HWE) kernel in Ubuntu 22.04. So use `uname -r` to check with version you're on. If you're running the original 5.15 kernel you're good and can move on to the next step. If you're running anything newer than 5.15 you need to downgrade kernel using `sudo apt install --install-recommends linux-generic`. This will switch you from the HWE to the original kernel. Note, that this kernel is still supported until the end of life of Ubuntu 20.04 - so you're still secure.
+As of now the legacy driver `nvidia-340` doesn't work with the newest hardware-enablement (HWE) kernel in Ubuntu 22.04. So use `uname -r` to check which version you're on. If you're running the original 5.15 kernel you're good and can move on to the next step. If you're running anything newer than 5.15 you need to downgrade kernel using `sudo apt install --install-recommends linux-generic`. This will switch you from the HWE to the original kernel. Note, that this kernel is still supported until the end of life of Ubuntu 22.04 - so you're still getting all security updates, you're just missing out on new kernel features.
 
 ### 2. Set PCI-E bus registers
 Because of a quirk with UEFI and the way the Mac sets its PCI-E registers the nvidia driver won't work out of the box but will lead to a black screen.
