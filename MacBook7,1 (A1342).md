@@ -36,7 +36,10 @@ If `apt` finishes without errors you're ready to reboot. You'll notice that the 
 ## Quality of Life Changes
 These steps are completely optional, but they considerably improve the usability of our venerable MacBook.
 
-### Gesten nachinstallieren
+### Get Grub to display
+Out of the box grub doesn't show up on this MacBook. In the grub config file `/etc/default/grub` uncommenting the line `GRUB_TERMINAL=console` and set `GRUB_TIMEOUT_STYLE=menu` to fixes. (Don't forget to run `sudo update-grub` after changing the the config file.)
+
+### Fix multitouch gestures
 Unsurprisingly the legacy nvidia driver only supports legacy display servers, so you're now running traditional X11 instead of Wayland. That means that Gnome's nifty touchpad gestures (e.g. three finger swipe-up) don't work, because they are Wayland-only. I find it jarring to not have my touchpad gestures on a Mac and luckily you can re-enable them using José Expósito's `touchegg` and the `X11 Gestures` Gnome extension. 
 
 Install touchegg from José Expósito's PPA:
@@ -48,7 +51,7 @@ $ sudo apt install touchegg
 
 Then install the `X11 Gestures` extension from [here](https://extensions.gnome.org/extension/4033/x11-gestures/) and you're good to go.
 
-**Additional tip**: I find installing Gnome extensions from the browser cumbersome. An IMO better way is to use the Gnome Extension Manager, which you can get from the repo:
+**Additional tip**: I find installing Gnome extensions from the browser cumbersome. I prefer to use the Gnome Extension Manager, which you can get from the repo:
 ```
 $ sudo apt install gnome-shell-extension-manager
 ```
