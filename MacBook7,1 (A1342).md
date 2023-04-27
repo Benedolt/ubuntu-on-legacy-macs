@@ -24,7 +24,7 @@ After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ct
 Under MacOS even Firefox supports two-finger swipes to jump back and forth. Under Ubuntu only Chromium-based browsers support that. I always install the Firefox extension [Two Finger History Jump](https://addons.mozilla.org/de/firefox/addon/two-finger-history-jump/) to get that feature back.
 
 # Install nvidia drivers
-Before the point release of Ubuntu 22.04.2 the would not run reliably using the nouveau driver but would freeze constantly. This could be fixed by installing the proprietary nvidia drivers. It might still be interesting and/or neccessary to some, so I'm leaving here's how you do it: 
+Switching from the nouveau to the nvidia drivers is not strictly neccessary anymore. Before the point release of Ubuntu 22.04.2 that was different as the OS would not would freeze constantly. This could be fixed by installing the proprietary nvidia drivers. It might still be interesting and/or neccessary to some, so I'm here's how you do it: 
 
 The MacBook7,1 uses an Nvidia GeForce 320M which is only supported in the legacy nvidia-driver version 340. This version isn't available in Ubuntu anymore so we have to jump through a few hoops:
 
