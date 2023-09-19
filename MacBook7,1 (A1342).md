@@ -50,6 +50,7 @@ $ sudo apt install xorg-modulepath-fix
 ```
 ### 4. Enjoy
 If `apt` finishes without errors you're ready to reboot. You'll notice that the boot animation is somewhat garbled, but apart from that you're now running the correct nvidia driver and a stable X.org session.
+
 **Note:** Brightness controls is the only feature that doesn't work out of the box. Brightness is always at the max value.
 
 ## Quality of Life Fixes when running with nvidia drivers/X.org
@@ -76,7 +77,7 @@ Now you can lauch the extension manager from the dash and then search for and in
 
 Using X.org you can use this method in order to convert the eject key in the top right of the keyboard to be the delete key. Again this is totally optional - I just never need an eject key, but often need to delete stuff. :)
 
-To do that, install AutoKey from the repos: $ sudo apt install autokey-gtk Run AutoKey, create a new Phrase, put <delete> in the big white text entry box and set the hotkey to <code169>. In the preferences window make sure that AutoKey is set to startup on login and that's that. :)
+To do that, install AutoKey from the repos: `sudo apt install autokey-gtk` Then run AutoKey, create a new Phrase, put `<delete>` in the big white text entry box and set the hotkey to `<code169>` and save. (Use "press to set".) In the preferences window make sure that AutoKey is set to startup on login and that's that. :)
 
 ## Ressources
 - [MacBook Specs on Everymac](https://everymac.com/systems/apple/macbook/specs/macbook-core-2-duo-2.4-white-13-polycarbonate-unibody-mid-2010-specs.html)
