@@ -2,7 +2,7 @@
 
 This is my collection of docs on how to run modern Ubuntu on old MacBooks. 🙂
 
-* [MacBook7,1 (mid-2010, polycarbonate)](https://github.com/Benedolt/ubuntu-on-legacy-macs/blob/main/MacBook7%2C1(mid-2010).md)
+* [MacBook7,1 (mid-2010, polycarbonate)](/MacBook7%2C1(mid-2010)/Ubuntu_22.04.md)
 * [MacBookPro9,2 (mid-2012, unibody)](https://github.com/Benedolt/ubuntu-on-legacy-macs/blob/main/MacBookPro9%2C2(mid-2012).md)
 
 
