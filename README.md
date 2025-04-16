@@ -8,8 +8,8 @@ The [Mid-2010 white polycarbonate MacBook](https://everymac.com/systems/apple/ma
 * [Ubuntu 24.04 Docs](/MacBook7%2C1(mid-2010)/Ubuntu_24.04.md)
 
 ## MacBookPro9,2 (mid-2012, unibody)
-This MacBookPro is one of the most common legacy (pre-retina) devices. Even when the retina MacBooks were introduced in 2012 Apple kept the 13-inch MacBookPro around for many years. Maybe because it was the last MacBook with an optical disk drive. So these chique unibody devices can be picked up cheaply on Ebay for example.
-* [Ubuntu 22.04 Guide](/MacBookPro9,27%2C1(mid-2012)/Ubuntu_22.04.md)
+This [MacBookPro](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.5-13-mid-2012-unibody-usb3-specs.html) is one of the most common legacy (pre-retina) devices. Even when the retina MacBooks were introduced in 2012 Apple kept the 13-inch MacBookPro around for many years. Maybe because it was the last MacBook with an optical disk drive. So these chique unibody devices can be picked up cheaply on Ebay for example. And they still run Ubuntu super well!
+* [Ubuntu 22.04 Guide](/MacBookPro9,2(mid-2012)/Ubuntu_22.04.md)
 
 
 This work is licensed under a
