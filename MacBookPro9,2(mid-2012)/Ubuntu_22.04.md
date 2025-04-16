@@ -8,6 +8,7 @@ This MacBookPro is one of the most common legacy (pre-retina) devices. Even when
 ## Installation
 
 As of Ubuntu 22.04.4 all you need to do is create your install USB drive, stick it into the MacBook, hold down the `Alt` key and select `EFI Boot`. Then install normally.
+
 ⚠️ You will not have wifi in the live environment and during the installer, so you need to plug the MacBook into a wired ethernet connection. Then enable `Install 3rd party drivers and software` in the installer and after a reboot wifi will work flawlessly.
 
 ❤️ That's literally it.

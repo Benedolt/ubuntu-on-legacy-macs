@@ -1,9 +1,7 @@
 # Ubuntu 22.04 on the MacBook 7,1 (Mid-2010 Polycarbonate)
-*last updated Sep 19 2023*
+*last updated April 2025*
 
-The Mid-2010 white polycarbonate MacBook is an iconic device. Sure, with its Core 2 Duo P8600 it's not going to break any speed records, but if you adjust expectations accordingly it's still a very competent machine for webbrowsing and some media comsumption. Installing an SSD and doing a RAM upgrade (it can go up to 16GB - double that of the Pro models from the era!) helps of course. This document outlines how to get a modern Ubuntu OS up and running. 
-
-As of Ubuntu 22.04.2 at least this is super easy and straight-forward. Simply create a USB installer and boot from it. (Hold down the alt/option key after the chime to access the boot menu.) Install, boot into your new OS afterwards and everything should work fine.
+As of Ubuntu 22.04.2 this is super easy and straight-forward. Simply create a USB installer and boot from it. (Hold down the alt/option key after the chime to access the boot menu.) Install, boot into your new OS afterwards and everything should work fine.
 
 There are a couple quality of life fixes though:
 
@@ -21,22 +19,18 @@ After a reboot Ubuntu will believe the leftmost key in the bottom row is the `ct
 
 **Note:** I also like to add `options hid_apple fnmode=2` to that file in order to default to F# keys instead of to media keys.
 
-## Two finger gestures for Firefox
-Under MacOS even Firefox supports two-finger swipes to jump back and forth. Under Ubuntu only Chromium-based browsers support that. I always install the Firefox extension [Two Finger History Jump](https://addons.mozilla.org/de/firefox/addon/two-finger-history-jump/) to get that feature back.
-
 # Install nvidia drivers
-Switching from the nouveau to the nvidia drivers is not strictly neccessary anymore. Before the point release of Ubuntu 22.04.2 that was different; nouveau/wayland would freeze constantly. This could be fixed by installing the proprietary nvidia drivers. Another argument for the proprietary driver is video acceleration, which doesn't seem to work with nouveau/wayland. So here's how you do it: 
+Switching from the nouveau to the nvidia drivers is not really neccessary anymore. As of the point release of Ubuntu 22.04.5 (kernel 6.8) nouveau runs really well. Before the point release of Ubuntu 22.04.2 that was different: nouveau/wayland would freeze constantly. This could be fixed by installing the proprietary nvidia drivers. Another argument for the proprietary driver is video acceleration, which doesn't seem to work with nouveau/wayland. So here's how you do it: 
 
 The MacBook7,1 uses an Nvidia GeForce 320M which is only supported in the legacy nvidia-driver version 340. This version isn't available in Ubuntu anymore so we have to jump through a few hoops:
 
 ### 1. Make sure you're running a compatible kernel
-As of **September 2023** the `nvidia-340` driver from [Butterfly/kelebek333's PPA](https://launchpad.net/~kelebek333/+archive/ubuntu/nvidia-legacy) support up to kernel version 6.3. Should your kernel be too new and should the PPA not be compatible with it (as was the case around early 2023) you'd now have to downgrade from your HWE 6.x to the stock 5.15 kernel that shipped with Ubuntu 22.04. 
+We're going to get the legacy `nvidia-340` driver from [Butterfly/kelebek333's PPA](https://launchpad.net/~kelebek333/+archive/ubuntu/nvidia-legacy). When the kernel changes, the driver in that PPA sometimes breaks, as was the case around early 2023. If that's still the case, you'd now have to downgrade from your HWE 6.x to the stock 5.15 kernel that shipped with Ubuntu 22.04. 
 
 First use `uname -r` to check which kernel version you're on and then downgrade using `sudo apt install --install-recommends linux-generic`. This will switch you from the HWE to the original/stock kernel. Note, that this kernel is still supported until the end of life of Ubuntu 22.04 - so you're still getting all security updates, you're just missing out on new kernel features.
 
 ### 2. Set PCI-E bus registers
-Because of a quirk with UEFI and the way the Mac sets its PCI-E registers the nvidia driver won't work out of the box but will lead to a black screen.
-Find out how to do this over at [AskUbuntu](https://askubuntu.com/a/613573/21008).
+Because of a quirk with UEFI and the way the Mac sets its PCI-E registers the nvidia driver won't work out of the box but will lead to a black screen. Find out how to do this over at [AskUbuntu](https://askubuntu.com/a/613573/21008).
 
 ### 3. Install the `nvidia-340` driver
 Finally it's time to actually install the nvidia driver. As the driver is not available in the official repositories anymore we can't just use the Ubuntu driver installer but need to add a PPA instead:
