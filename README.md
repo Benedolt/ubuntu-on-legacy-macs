@@ -11,6 +11,10 @@ The [Mid-2010 white polycarbonate MacBook](https://everymac.com/systems/apple/ma
 This [MacBookPro](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.5-13-mid-2012-unibody-usb3-specs.html) is one of the most common legacy (pre-retina) devices. Even when the retina MacBooks were introduced in 2012 Apple kept the 13-inch MacBookPro around for many years. Maybe because it was the last MacBook with an optical disk drive. So these chique unibody devices can be picked up cheaply on Ebay for example. And they still run Ubuntu super well!
 * [Ubuntu 22.04 Guide](/MacBookPro9,2(mid-2012)/Ubuntu_22.04.md)
 
+## iMac13,1 (mid-2012, 21")
+In 2012 Apple evolved their iMac design and went from the chunky 2011 iMacs to the [tapered edge iMac model](https://everymac.com/ultimate-mac-lookup/?identify=iMac13,1) which would stick around until the M1 iMacs. Design-wise a solid choice, these iMacs still look iconic and modern today - more than a decade after their release. However, from a repairability and servicablity standpoint things look bleak. The LCD is not glued to the case and getting it off and re-adhering it afterwards is a major undertaking... Real shame, because once you've got them cracked open you can still upgrade the RAM and switch out the hard drive. (Indeed you should, these iMacs shipped with slow 5.400 rpm drives and even if they run modern OS fine, your patience is going to be really tested...) At least running Ubuntu on these is a breeze.
+* [Ubuntu 26.04 Guide](/iMac13,1(mid-2012)/Ubuntu_26.04.md)
+
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
