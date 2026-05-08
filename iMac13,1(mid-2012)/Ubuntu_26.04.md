@@ -44,5 +44,9 @@ WIFI doesn't work out of the box. We're dealing with another of the ever-wonky B
 
 Then reboot and you should be all set. 
 
+## Todo
+- ⚠️ brightness controls
+- ⚠️ headphone jack
+
 ### Notes 
 - [Here](https://wiki.ubuntuusers.de/WLAN/Karten/Broadcom/) you can find a handy (albeit German language) list of what Broadcom card needs which driver... 
