@@ -36,7 +36,7 @@ This is the first of the tapered-edge iMacs, and it runs Ubuntu easily.
 
 To install Ubuntu 26.04 all you need to do is create your install USB drive, stick it into the MacBook, hold down the `Alt` key and select `EFI Boot`. Then install normally.
 
-## Fixing WIFI
+## 🛠️ Fixing WIFI
 
 WIFI doesn't work out of the box. We're dealing with another of the ever-wonky Broadcom cards, the `BCM4331` specifically. In its initial release of Ubuntu 26.04 neither the `Install third party drivers` option in the installer nor the driver utility doesn't seem to be able to deal with this conundrum and you have to manually install the Broadcom firmware by plugging in a network cable and running:
 
@@ -44,9 +44,9 @@ WIFI doesn't work out of the box. We're dealing with another of the ever-wonky B
 
 Then reboot and you should be all set. 
 
-## Todo
-- ⚠️ brightness controls
-- ⚠️ headphone jack
+## 🚫 Screen Brightness Controls
+
+Screen brightness controls are *not* available on Ubuntu 26.04 - the screen is always at max brightness. I tried a couple kernel args (`nomodeset`, several `acpi_backlight` values: `native`, `vendor`, `video`) and nothing worked. I suspect it's a Wayland thing...
 
 ### Notes 
-- [Here](https://wiki.ubuntuusers.de/WLAN/Karten/Broadcom/) you can find a handy (albeit German language) list of what Broadcom card needs which driver... 
+- [Here](https://wiki.ubuntuusers.de/WLAN/Karten/Broadcom/) you can find a handy (albeit German language) list of what Broadcom card needs which driver...
