@@ -38,15 +38,19 @@ To install Ubuntu 26.04 all you need to do is create your install USB drive, sti
 
 ## 🛠️ Fixing WIFI
 
-WIFI doesn't work out of the box. We're dealing with another of the ever-wonky Broadcom cards, the `BCM4331` specifically. In its initial release of Ubuntu 26.04 neither the `Install third party drivers` option in the installer nor the driver utility doesn't seem to be able to deal with this conundrum and you have to manually install the Broadcom firmware by plugging in a network cable and running:
+WIFI doesn't work out of the box. We're dealing with another of the ever-wonky Broadcom cards, the `BCM4331` specifically. In its initial release of Ubuntu 26.04 neither the `Install third party drivers` option in the installer nor the driver utility doesn't seem to be able to deal with this conundrum. You have to manually install the Broadcom firmware by plugging in a network cable and running:
 
 `sudo apt install b43-fwcutter firmware-b43-installer`
 
 Then reboot and you should be all set. 
 
+# 🛠️ Fixing headphone jack audio
+
+By default you won't get audio when using wired headphones. (Bluetooth works no problem.) To fix this headphone jack issue add `options snd-hda-intel model=imac27_122` to your `/etc/modprobe.d/alsa-base.conf` and reboot. 
+
 ## 🚫 Screen Brightness Controls
 
-Screen brightness controls are *not* available on Ubuntu 26.04 - the screen is always at max brightness. I tried a couple kernel args (`nomodeset`, several `acpi_backlight` values: `native`, `vendor`, `video`) and nothing worked. I suspect it's a Wayland thing...
+Screen brightness controls are *not* available on Ubuntu 26.04 - the screen is always at max brightness. I tried a couple kernel args (`nomodeset`, several `acpi_backlight` values: `native`, `vendor`, `video`) and nothing worked. I suspect it's an issue with the `nouveau` driver and/or Wayland. A potential fix would be to downgrade to a previous Ubuntu release and use X.Org with the proprietary nvidia driver.
 
 ### Notes 
 - [Here](https://wiki.ubuntuusers.de/WLAN/Karten/Broadcom/) you can find a handy (albeit German language) list of what Broadcom card needs which driver...
