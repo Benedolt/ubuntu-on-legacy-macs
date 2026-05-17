@@ -1,5 +1,5 @@
-# Ubuntu 25.10
-*updated September 2025*
+# Ubuntu 26.04
+*updated May 2026*
 
 - ✅ Basically, it just works. 
 - ✅ Wayland runs perfectly on this iMac, no notes. AMD and Intel GPUs work.

@@ -9,7 +9,7 @@ The [Mid-2010 white polycarbonate MacBook](https://everymac.com/systems/apple/ma
 
 ## iMac12,2 (mid-2011, 27")
 The [mid-2011 iMacs](https://everymac.com/ultimate-mac-lookup/?identify=iMac12%2C2) are the last easily servicable iMacs. You can upgrade the RAM via a little access door and you can open the case by detaching the front glass using suction cups - no glue anywhere! Inside you can switch out the HDD, add a second HDD in place of the optical drive and you can even upgrade the GPU. (Indeed you'd probably want to, as the 2011 AMD GPUs have a tendency to fry themselves... Big scandal back in the day.) By adding a more modern GPU you can even install newer, unsupported versions of MacOS and get graphics accelleration. That's what makes the 2011 iMacs real unicorns. And on top of all that, Ubuntu runs great. 
-* [Ubuntu 25.10 Guide](/iMac12,2(mid-2011)/Ubuntu_25.10.md)
+* [Ubuntu 26.04 Guide](/iMac12,2(mid-2011)/Ubuntu_26.04.md)
 
 ## MacBookPro9,2 (mid-2012, unibody)
 This [MacBookPro](https://everymac.com/systems/apple/macbook_pro/specs/macbook-pro-core-i5-2.5-13-mid-2012-unibody-usb3-specs.html) is one of the most common legacy (pre-retina) devices. Even when the retina MacBooks were introduced in 2012 Apple kept the 13-inch MacBookPro around for many years. Maybe because it was the last MacBook with an optical disk drive. So these chique unibody devices can be picked up cheaply on Ebay for example. And they still run Ubuntu super well!
